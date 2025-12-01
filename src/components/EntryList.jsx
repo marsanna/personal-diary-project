@@ -11,7 +11,7 @@ function EntryList() {
         {cards && cards.length > 0 ? (
           cards.map((card) => <EntryCard card={card} key={card.id} />)
         ) : (
-          <div>No entries found</div>
+          <div className="text-center">No entries found</div>
         )}
       </div>
     </>
