@@ -4,14 +4,23 @@ function EntryCard({ card }) {
   const { id, title, date, url } = card;
   return (
     <>
-      <br />
-      ---
-      <br />
-      EntryCard
       <Link to={`/view/${id}`} className="hover:underline">
-        <div>{url}</div>
-        <div>{date}</div>
-        <div>{title}</div>
+        <div className="card bg-base-100 full-h border-2 border-blue-500">
+          <figure>
+            <img
+              src={url}
+              alt={title}
+              className="h-48 w-full object-cover"
+              width="100%"
+              height="auto"
+            />
+          </figure>
+          <div className="card-body">
+            Date: {date}
+            <br />
+            <h2 className="card-title">{title}</h2>
+          </div>
+        </div>
       </Link>
     </>
   );

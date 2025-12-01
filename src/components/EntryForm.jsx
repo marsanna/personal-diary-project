@@ -96,9 +96,7 @@ function EntryForm({ card }) {
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const newValue = value
-      .replace(/<[^>]*>/g, "")
-      .replace(/[^\w\s.,:;!?/-]/g, "");
+    const newValue = value.replace(/<[^>]*>/g, "");
     setFormData({
       ...formData,
       [name]: newValue,
@@ -110,8 +108,12 @@ function EntryForm({ card }) {
     });
   };
   return (
-    <div>
-      <form method="get" onSubmit={handleSubmit}>
+    <div className="flex w-full md:w-1/2">
+      <form
+        method="get"
+        onSubmit={handleSubmit}
+        className="mx-5 w-full rounded-lg border-2 border-gray-200 p-5"
+      >
         <div>
           <label htmlFor="title" className="block">
             Title*
@@ -153,6 +155,7 @@ function EntryForm({ card }) {
             onChange={handleChange}
             className={`input ${!validFields.url ? "border-red-500" : ""}`}
           />
+          <br />
         </div>
         <br />
         <div>

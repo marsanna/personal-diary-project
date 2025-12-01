@@ -9,13 +9,8 @@ function AddEntryModal() {
   const card = cards.find((c) => c.id === parseInt(date));
   return (
     <>
-      <div>
-        AddEntryModal Page
-        <br />
-        ---
-        <br />
-        <EntryForm card={date ? (card ? card : {}) : {}} />
-      </div>
+      <h1 className="mb-2 text-lg font-bold">Add new entry</h1>
+      <EntryForm card={date ? (card ? card : {}) : {}} />
     </>
   );
 }

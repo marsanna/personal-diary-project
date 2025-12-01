@@ -5,15 +5,14 @@ import Greeting from "./Greeting.jsx";
 
 function Header() {
   return (
-    <header>
-      <Greeting />
-      <nav>
+    <header className="sticky top-0 z-100 mb-5 flex flex-col items-center justify-center bg-blue-500 p-5 text-blue-950 md:flex-row md:justify-between">
+      <nav className="flex flex-col items-center gap-2 md:flex-row">
         <Link to="/" className="hover:underline">
           Home
         </Link>
-        <br />
         <AddEntryButton />
       </nav>
+      <Greeting />
     </header>
   );
 }
