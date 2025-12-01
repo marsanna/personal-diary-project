@@ -148,7 +148,7 @@ function EntryForm({ card }) {
             Image URL*
           </label>
           <input
-            type="text"
+            type="url"
             name="url"
             id="url"
             value={formData.url}
