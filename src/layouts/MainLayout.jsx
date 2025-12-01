@@ -21,7 +21,7 @@ export default function MainLayout() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-[1440px] flex-grow">
+      <main className="mb-10 flex max-w-[1440px] flex-grow flex-col items-center">
         <Outlet context={{ cards, updateCards }} />
       </main>
       <Footer />

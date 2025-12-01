@@ -7,9 +7,7 @@ function EntryList() {
   if (!cards) return <div>Loading...</div>;
   return (
     <>
-      <div>
-        EntryList:
-        <br />
+      <div className="mx-5 grid grid-cols-1 gap-5 md:grid-cols-3">
         {cards && cards.length > 0 ? (
           cards.map((card) => <EntryCard card={card} key={card.id} />)
         ) : (

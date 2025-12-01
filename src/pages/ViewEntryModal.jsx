@@ -9,13 +9,8 @@ function ViewEntryModal() {
   const card = cards.find((c) => c.id === parseInt(date));
   return (
     <>
-      <div>
-        ViewEntryModal Page
-        <br />
-        ---
-        <br />
-        <EntryDetails card={card ?? {}} />
-      </div>
+      <h1 className="mb-2 text-lg font-bold">Entry details</h1>
+      <EntryDetails card={card ?? {}} />
     </>
   );
 }
