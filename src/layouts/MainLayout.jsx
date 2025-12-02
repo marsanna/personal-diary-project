@@ -6,7 +6,7 @@ import Header from "../components/Header.jsx";
 import { Diary, loadStorage, writeStorage } from "../data/storage.js";
 
 export default function MainLayout() {
-  const [cards, setCards] = useState(loadStorage());
+  const [cards, setCards] = useState();
   const updateCards = (newCards) => {
     setCards(newCards);
     writeStorage(newCards);
